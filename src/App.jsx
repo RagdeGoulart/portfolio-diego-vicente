@@ -618,17 +618,24 @@ function Footer() {
               <Btn variant="outline-light" href={MAPS} withArrow arrowType="right">Ver no mapa</Btn>
             </div>
           </div>
-          <a className="map-card" href={MAPS} target="_blank" rel="noopener" style={{ textDecoration: "none" }}>
-            <Ph className="" label="Mapa — Goiânia · clique para abrir" />
-          </a>
+          <div className="map-card">
+            <iframe
+              className="map-frame"
+              title="Localização — ORGANIQ BEAUTÉ, Goiânia"
+              src="https://maps.google.com/maps?q=-16.6961132,-49.2567584&z=16&hl=pt-BR&output=embed"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+            />
+          </div>
         </div>
       </div>
       <div className="section" style={{ paddingTop: "clamp(40px,5vw,64px)", paddingBottom: "clamp(40px,5vw,64px)" }}>
         <div className="container footer-bottom">
           <div className="footer-brand" style={{ maxWidth: 280 }}>
             <div className="mark">Diego Vicente</div>
-            <div className="sub">Nanopigmentação · Goiânia</div>
-            <p style={{ color: "rgba(255,255,255,0.7)", fontSize: "0.9rem", marginTop: 14 }}>Arte natural, ciência e biossegurança em cada detalhe.</p>
+            <div className="sub">Beleza natural</div>
+            <p style={{ color: "rgba(255,255,255,0.7)", fontSize: "0.9rem", marginTop: 14 }}>Arte natural, técnica e biossegurança em cada detalhe.</p>
           </div>
           <div className="footer-col">
             <div className="fc-t">Navegação</div>
@@ -640,12 +647,18 @@ function Footer() {
           <div className="footer-col">
             <div className="fc-t">Contato</div>
             <a href={WA} target="_blank" rel="noopener">WhatsApp · (62) 9276-5241</a>
-            <a href={MAPS} target="_blank" rel="noopener">Goiânia · Ver no Google Maps</a>
-            <a href="https://instagram.com" target="_blank" rel="noopener" style={{ display: "inline-flex", alignItems: "center", gap: 8 }}><Ico.insta />Instagram</a>
+            <a href="https://www.instagram.com/diegovicentte/" target="_blank" rel="noopener" style={{ display: "inline-flex", alignItems: "center", gap: 8 }}><Ico.insta />Instagram</a>
           </div>
         </div>
       </div>
-      <div className="footer-legal">© {new Date().getFullYear()} Diego Vicente · Nanopigmentação · Goiânia. Todos os direitos reservados.</div>
+      <div className="footer-legal">© {new Date().getFullYear()} Diego Vicente · Beleza natural. Todos os direitos reservados.</div>
+      <div className="footer-credit">
+        <span>Desenvolvido por</span>
+        <a href="https://wa.me/5595991742756?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener">
+          <img src="/assets/logo_rg.svg" alt="R. Goulart Design LTDA" />
+          R. Goulart Design LTDA
+        </a>
+      </div>
     </footer>
   );
 }

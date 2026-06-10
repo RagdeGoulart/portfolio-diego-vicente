@@ -258,8 +258,8 @@ function Footer() {
         <div className="container footer-bottom">
           <div className="footer-brand" style={{ maxWidth: 280 }}>
             <div className="mark">Diego Vicente</div>
-            <div className="sub">Nanopigmentação · Goiânia</div>
-            <p style={{ color: "rgba(255,255,255,0.7)", fontSize: "0.9rem", marginTop: 14 }}>Arte natural, ciência e biossegurança em cada detalhe.</p>
+            <div className="sub">Beleza natural</div>
+            <p style={{ color: "rgba(255,255,255,0.7)", fontSize: "0.9rem", marginTop: 14 }}>Arte natural, técnica e biossegurança em cada detalhe.</p>
           </div>
           <div className="footer-col">
             <div className="fc-t">Navegação</div>
@@ -271,12 +271,11 @@ function Footer() {
           <div className="footer-col">
             <div className="fc-t">Contato</div>
             <a href={WA} target="_blank" rel="noopener">WhatsApp · (62) 9276-5241</a>
-            <a href={MAPS} target="_blank" rel="noopener">Goiânia · Ver no Google Maps</a>
             <a href="https://instagram.com" target="_blank" rel="noopener" style={{ display: "inline-flex", alignItems: "center", gap: 8 }}><Ico.insta />Instagram</a>
           </div>
         </div>
       </div>
-      <div className="footer-legal">© {new Date().getFullYear()} Diego Vicente · Nanopigmentação · Goiânia. Todos os direitos reservados.</div>
+      <div className="footer-legal">© {new Date().getFullYear()} Diego Vicente · Beleza natural. Todos os direitos reservados.</div>
     </footer>
   );
 }
