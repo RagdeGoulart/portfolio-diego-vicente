@@ -1,25 +1,62 @@
-# CODING AGENTS: READ THIS FIRST
+# Portfólio — Diego Vicente
 
-This is a **handoff bundle** from Claude Design (claude.ai/design).
+Landing page de página única (one-page) do **Diego Vicente** — Nanopigmentação Natural, em Goiânia.
+Estilo editorial/luxo, mobile-first, com hero, abas de serviços, galeria antes/depois,
+depoimentos, FAQ e CTA de WhatsApp.
 
-A user mocked up designs in HTML/CSS/JS using an AI design tool, then exported this bundle so a coding agent can implement the designs for real.
+Construído com **React 18** + **Vite**.
 
-## What you should do — IMPORTANT
+## Pré-requisitos
 
-**Read the chat transcripts first.** There are 1 chat transcript(s) in `chats/`. The transcripts show the full back-and-forth between the user and the design assistant — they tell you **what the user actually wants** and **where they landed** after iterating. Don't skip them. The final HTML files are the output, but the chat is where the intent lives.
+- [Node.js](https://nodejs.org/) 18 ou superior (testado com Node 24)
 
-**Read `project/index.html` in full.** The user had this file open when they triggered the handoff, so it's almost certainly the primary design they want built. Read it top to bottom — don't skim. Then **follow its imports**: open every file it pulls in (shared components, CSS, scripts) so you understand how the pieces fit together before you start implementing.
+## Como rodar (desenvolvimento)
 
-**If anything is ambiguous, ask the user to confirm before you start implementing.** It's much cheaper to clarify scope up front than to build the wrong thing.
+```bash
+npm install      # só na primeira vez (instala as dependências)
+npm run dev      # inicia o servidor local
+```
 
-## About the design files
+Depois abra o endereço que aparecer no terminal (normalmente `http://localhost:5173`).
+A página recarrega sozinha a cada alteração no código.
 
-The design medium is **HTML/CSS/JS** — these are prototypes, not production code. Your job is to **recreate them pixel-perfectly** in whatever technology makes sense for the target codebase (React, Vue, native, whatever fits). Match the visual output; don't copy the prototype's internal structure unless it happens to fit.
+## Gerar a versão de produção
 
-**Don't render these files in a browser or take screenshots unless the user asks you to.** Everything you need — dimensions, colors, layout rules — is spelled out in the source. Read the HTML and CSS directly; a screenshot won't tell you anything they don't.
+```bash
+npm run build    # gera a pasta dist/ otimizada e minificada
+npm run preview  # visualiza localmente o build de produção
+```
 
-## Bundle contents
+A pasta **`dist/`** é o que vai para o ar. É só publicá-la em qualquer hospedagem
+estática — [Vercel](https://vercel.com), [Netlify](https://netlify.com) ou
+GitHub Pages, por exemplo. Em Vercel/Netlify, basta conectar o repositório:
+o comando de build é `npm run build` e a pasta de saída é `dist`.
 
-- `README.md` — this file
-- `chats/` — conversation transcripts (read these!)
-- `project/` — the `Portfolio-Vicente` project files (HTML prototypes, assets, components)
+## Estrutura do projeto
+
+```
+.
+├── index.html          # HTML base (carrega as fontes e monta o app)
+├── src/
+│   ├── main.jsx        # ponto de entrada (monta o React)
+│   ├── App.jsx         # todos os componentes da página
+│   └── styles.css      # design system e estilos
+├── public/
+│   └── assets/         # imagens usadas no site (servidas em /assets/...)
+├── vite.config.js      # configuração do Vite
+└── package.json        # dependências e scripts
+```
+
+## Onde editar coisas comuns
+
+- **Textos, seções e estrutura:** `src/App.jsx`
+- **Cores, fontes e espaçamentos:** variáveis no topo de `src/styles.css` (`:root { ... }`)
+- **Imagens:** adicione/troque arquivos em `public/assets/` e referencie como `/assets/nome.jpg`
+- **Título e descrição (SEO) e fontes do Google:** `index.html`
+- **Número de WhatsApp:** procure por `WA` em `src/App.jsx`
+
+## Material de design (referência)
+
+As pastas `project/` e `chats/` contêm os arquivos originais do design
+(protótipo do Claude Design e o histórico da conversa). Não fazem parte do
+site publicado — servem apenas como referência. Podem ser removidas sem afetar o build.
