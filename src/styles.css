@@ -175,7 +175,10 @@ p { margin: 0; text-wrap: pretty; }
   border-bottom: 1px solid var(--line);
   padding-top: 13px; padding-bottom: 13px;
 }
-.brand { display: flex; align-items: baseline; gap: 10px; text-decoration: none; color: var(--ink); }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); }
+.brand-logo { height: 52px; width: auto; display: block; }
+.nav.scrolled .brand-logo { height: 46px; }
+@media (max-width: 760px) { .brand-logo { height: 44px; } }
 .brand .mark {
   font-family: var(--font-display);
   font-size: 1.55rem;
@@ -512,6 +515,7 @@ p { margin: 0; text-wrap: pretty; }
 .footer-col a, .footer-col p { display:block; color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.92rem; margin-bottom: 9px; transition: color 0.3s; }
 .footer-col a:hover { color: #fff; }
 .footer-brand .mark { font-family: var(--font-display); font-size: 1.8rem; color: #fff; }
+.footer-logo { width: 200px; max-width: 100%; height: auto; display: block; }
 .footer-brand .sub { font-size: 0.62rem; letter-spacing: 0.24em; text-transform: uppercase; color: rgba(255,255,255,0.6); }
 .footer-legal { padding: 22px var(--pad) 8px; text-align: center; font-size: 0.78rem; color: rgba(255,255,255,0.5); border-top: 1px solid rgba(255,255,255,0.1); }
 .footer-credit { padding: 0 var(--pad) 22px; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 8px; font-size: 0.72rem; color: rgba(255,255,255,0.4); }

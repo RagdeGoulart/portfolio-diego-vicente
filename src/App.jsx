@@ -132,9 +132,8 @@ function Nav() {
   }, []);
   return (
     <nav className={"nav" + (scrolled ? " scrolled" : "")}>
-      <a className="brand" href="#top">
-        <span className="mark">Diego Vicente</span>
-        <span className="sub">Nanopigmentação</span>
+      <a className="brand" href="#top" aria-label="Diego Vicente Estética">
+        <img className="brand-logo" src="/assets/logo-principal.png" alt="Diego Vicente Estética" />
       </a>
       <div className="nav-links">
         <a href="#servicos">Serviços</a>
@@ -633,8 +632,7 @@ function Footer() {
       <div className="section" style={{ paddingTop: "clamp(40px,5vw,64px)", paddingBottom: "clamp(40px,5vw,64px)" }}>
         <div className="container footer-bottom">
           <div className="footer-brand" style={{ maxWidth: 280 }}>
-            <div className="mark">Diego Vicente</div>
-            <div className="sub">Beleza natural</div>
+            <img className="footer-logo" src="/assets/logo-horizontal.svg" alt="Diego Vicente Estética" />
             <p style={{ color: "rgba(255,255,255,0.7)", fontSize: "0.9rem", marginTop: 14 }}>Arte natural, técnica e biossegurança em cada detalhe.</p>
           </div>
           <div className="footer-col">
